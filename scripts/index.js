@@ -74,4 +74,24 @@
         })
 
       }
-  
+
+      document.querySelector("#soting").addEventListener("click",soting)
+      function soting(event){
+        event.preventDefault();
+        console.log(document.getElementById("soting").value)
+        var d=document.getElementById("soting").value
+        if(d=="sort-hl"){
+            movies.sort(function(a,b){
+              return b.rate - a.rate
+            })
+          
+             display(movies)
+          }
+             else if(d=="sort-lh"){
+                movies.sort(function(a,b){
+              return a.rate - b.rate
+            })
+    
+             display(movies)
+             }
+      }

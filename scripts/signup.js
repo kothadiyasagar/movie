@@ -2,7 +2,7 @@
 document.querySelector("#from").addEventListener("submit",sa)
 
 var s = JSON.parse(localStorage.getItem("sign")) || [];
-function sa() {
+function sa(event) {
   event.preventDefault();
   var signupObj = {
     email: document.querySelector("#email").value,
