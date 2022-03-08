@@ -29,3 +29,20 @@
     width: 100%;
     height: 300px;  
 }
+#movies {
+    margin-top: 5%;
+    display: grid;
+     
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: 100px ;
+    /* margin-left: 70px; */
+    gap: 20px;
+    
+}
+#div1{
+    border: 2px solid rgb(161, 159, 159);
+    width: 400px;
+    display: flex;
+}
+
+
