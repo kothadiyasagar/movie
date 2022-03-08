@@ -31,8 +31,8 @@
       var movies = [
           {image:"https://www.deccanherald.com/sites/dh/files/articleimages/2021/12/17/file7ivjchsfnw1f6gj8eay-1061813-1639743521.jpg", name:"Pushpa", action:"Action,Drama",rate:"9"},
           {image:"https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_QL75_UX380_CR0,0,380,562_.jpg", name:"The Batman", action:"Action,Drama",rate:"8.5"},
-          {image:"https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/?ref_=tt_ov_i", name:"The Godfather", action:"Crime,Drama",rate:"9.2"},
-          {image:"https://www.imdb.com/title/tt0317248/mediaviewer/rm1021136128/?ref_=tt_ov_i", name:"City of God", action:"Crime,Drama",rate:"8.3"},
+          {image:"https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg", name:"The Godfather", action:"Crime,Drama",rate:"9.2"},
+          {image:"https://resizing.flixster.com/7ST9hXTV88PhGsKLAOoyoqDTh3g=/206x305/v2/https://flxt.tmsimg.com/assets/p30586_p_v8_aj.jpg", name:"City of God", action:"Crime,Drama",rate:"8.3"},
           {image:"https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UX380_CR0,2,380,562_.jpg", name:"life Is Beautiful", action:"Crime,Drama,Romance,War",rate:"8"},
           {image:"https://m.media-amazon.com/images/M/MV5BOWY0MzZkN2QtODI1MC00Nzg0LWE3YmUtNTNhMWU4YTFjOTA4XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_QL75_UY562_CR21,0,380,562_.jpg", name:" Bhuj: The Pride of India", action:"Crime,Drama,Romance,War",rate:"8.2"},
           {image:"https://m.media-amazon.com/images/M/MV5BMTYzOTE2NjkxN15BMl5BanBnXkFtZTgwMDgzMTg0MzE@._V1_QL75_UY562_CR4,0,380,562_.jpg", name:"PK", action:"Comedy,Drama,Sci-Fi",rate:"9.5"},
@@ -48,15 +48,28 @@
         document.querySelector("#movies").innerHTML=""
         movies.map(function(elem,index){
            var div= document.createElement("div")
-         div.setAttribute("id","div1")
+             div.setAttribute("id","div1")
          var img = document.createElement("img");
          img.setAttribute("src", elem.image);
-         img.setAttribute("id","img")
+         img.setAttribute("id","img1")
          var div2= document.createElement("div")
-         div.setAttribute("id","div2")
-           var name=document.createElement("h5")
+         div2.setAttribute("id","div2")
+           var name=document.createElement("h3")
            name.innerText=elem.name;
-           div.append(name)
+           var action=document.createElement("p")
+           action.innerText=elem.action
+           var div3= document.createElement("div")
+             div3.setAttribute("id","div3")
+           var rate=document.createElement("p")
+           rate.innerText=elem.rate
+           rate.style.marginTop="-3px"
+           rate.style.fontSize="18px"
+           var span=document.createElement("span")
+           span.setAttribute("class","fa fa-star")
+        //    <span class="fa fa-star"></span>
+        div3.append(rate,span)
+           div2.append(name,action,div3)
+           div.append(img,div2)
            document.querySelector("#movies").append(div)
         })
 

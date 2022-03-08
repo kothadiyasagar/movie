@@ -39,10 +39,26 @@
     gap: 20px;
     
 }
-#div1{
-    border: 2px solid rgb(161, 159, 159);
+#movies>div{
+   
     width: 400px;
+    height: 100px;
+    border: 2px solid rgb(119, 117, 117);
     display: flex;
 }
+#img1{
+    width: 70px;
+}
+#div2{
+    margin-top: 0px;
+    margin-left: 20px;
+}
+h3{
+  margin-top: 2px;
+}
+#div3{
+    display:flex;
+}
+
 
 
